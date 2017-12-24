@@ -14,7 +14,6 @@ require 'date'
 require 'optparse'
 require 'open-uri'
 require 'openssl'
-require 'flurry'
 require 'logger'
 
 # set to DEBUG if needwed
@@ -38,6 +37,8 @@ OptionParser.new do |opts|
   opts.on('-a', '--availabilityZone AVAILABILITYZONE', 'Availability zone of the new node. e.g. rot_2') { |v| options[:availability_zone] = v }
   opts.on('-x', '--timeout TIMEOUT', 'Provision timeout') { |v| options[:timeout] = v }
   opts.on('-u', '--endpoint ENDPOINT_URL', 'Ec2 Endpoint url. Default is europe e.g.: ec2-europe.api.monsoon.mo.sap.corp') { |v| options[:endpoint] = v }
+  opts.on('-U', '--username USERNAME ', 'USERNAME' )  { |v| options[:username] = v } 
+  opts.on('-P', '--password PASSWORD ', 'Password' )  { |v| options[:password] = v } 
 end.parse!
 
 # mandatory options
