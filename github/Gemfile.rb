@@ -1,0 +1,5 @@
+source 'http://moo-repo.wdf.sap.corp:8080/geminabox/'
+source 'http://moo-repo.wdf.sap.corp:8080/rubygemsorg/'
+
+gem 'json'
+gem 'nokogiri'
