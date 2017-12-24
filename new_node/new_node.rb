@@ -86,11 +86,11 @@ if average_wait_time > MAX_WAIT_SECONDS || MAX_WAIT_SECONDS == 0
   logger.info('Maximum queue time reached or no wait time set. Instance will be created now.')
 
   # get monsoon object
-  monsoon_options = {'platform_token' => options[:token]}
-  monsoon_options['ec2_host'] = options[:endpoint] if options.has_key?(:endpoint) && !options[:endpoint].empty?
-  monsoon = Flurry::Monsoon.new(monsoon_options)
-  logger.debug("Creating instance: #{options[:size]}, Organization: #{options[:organization]}, Project: #{options[:project]}")
-  project = monsoon[options[:organization]][options[:project]]
+#  monsoon_options = {'platform_token' => options[:token]}
+#  monsoon_options['ec2_host'] = options[:endpoint] if options.has_key?(:endpoint) && !options[:endpoint].empty?
+#  monsoon = Flurry::Monsoon.new(monsoon_options)
+ # logger.debug("Creating instance: #{options[:size]}, Organization: #{options[:organization]}, Project: #{options[:project]}")
+ # project = monsoon[options[:organization]][options[:project]]
 
   # set options for the new instance
   instance_options = {'InstanceType' => options[:size]}
